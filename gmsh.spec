@@ -2,7 +2,7 @@ Summary:	A 3D mesh generator with pre- and post-processing facilities
 Summary(pl):	Generator siatki 3D zawieraj±cy pre/post procesor
 Name:		gmsh
 Version:	1.55.0
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Applications/Engineering
 Source0:	http://www.geuz.org/gmsh/src/%{name}-%{version}-source.tgz
@@ -13,6 +13,7 @@ BuildRequires:	autoconf
 BuildRequires:	OpenGL-devel
 BuildRequires:	fltk-gl-devel >= 1.1.0
 BuildRequires:	gsl-devel
+Requires:	getdp
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
