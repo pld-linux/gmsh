@@ -1,15 +1,15 @@
 Summary:	A 3D mesh generator with pre- and post-processing facilities
 Summary(pl):	Generator siatki 3D zawieraj±cy pre/post procesor
 Name:		gmsh
-Version:	1.52.1
+Version:	1.53.0
 Release:	0.1
 License:	GPL
 Group:		Applications/Engineering
 Source0:	http://www.geuz.org/gmsh/src/%{name}-%{version}-source.tgz
-# Source0-md5:	07782893e995a88be72f0df4375fefd9
+# Source0-md5:	7e78031d23eb6e18f57b22b54065bc59
 URL:		http://www.geuz.org/gmsh/
 BuildRequires:	OpenGL-devel
-BuildRequires:	fltk-gl-devel
+BuildRequires:	fltk-gl-devel >= 1.1.0
 BuildRequires:	gsl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,17 +27,18 @@ installed on your system.
 Gmsh jest automatycznym generatorem trójwymiarowej siatki elementów
 skoñczonych (g³ównie Delaunay), z wbudowanym pre/post procesorem.
 G³ównym zadaniem przy projektowaniu Gmsh by³o stworzenie prostego
-narzêdzia wykorzystywanego w testach akademickich, do generownia
+narzêdzia wykorzystywanego w testach akademickich, do generowania
 siatki, z parametrycznym wej¶ciem i mo¿liwo¶ci± wizualizacji wyników
 na bie¿±co. Jedn± z mocnych stron Gmesh jest mo¿liwo¶æ okre¶lenia
 d³ugo¶ci generowanego elementu, która zostanie zastosowana do
-dyskretyzacji lini, powierzchni i objêto¶ci. Gmesh wymaga OpenGL (lub
+dyskretyzacji linii, powierzchni i objêto¶ci. Gmesh wymaga OpenGL (lub
 Mesy) zainstalowanej w twoim systemie.
 
 %prep
 %setup -q
 
 %build
+%{__autoconf}
 %configure
 %{__make}
 %{__make} converters
@@ -59,5 +60,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README TODO doc/{CREDITS,FAQ,VERSIONS}
 %attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/gmsh.1*
+%{_mandir}/man1/*
 %{_infodir}/*.info*
