@@ -7,5 +7,5 @@ Icon=gmsh.png
 Exec=gmsh
 Terminal=false
 Type=Application
-Categories=Engineering;
+Categories=Utility;Engineering;
 # vi: encoding=utf-8
