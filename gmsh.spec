@@ -2,12 +2,14 @@ Summary:	A 3D mesh generator with pre- and post-processing facilities
 Summary(pl):	Generator siatki 3D zawieraj±cy pre/post procesor
 Name:		gmsh
 Version:	1.53.0
-Release:	0.1
+Release:	0.2
 License:	GPL
 Group:		Applications/Engineering
 Source0:	http://www.geuz.org/gmsh/src/%{name}-%{version}-source.tgz
 # Source0-md5:	7e78031d23eb6e18f57b22b54065bc59
+Source1:	%{name}.desktop
 URL:		http://www.geuz.org/gmsh/
+BuildRequires:	autoconf
 BuildRequires:	OpenGL-devel
 BuildRequires:	fltk-gl-devel >= 1.1.0
 BuildRequires:	gsl-devel
@@ -47,11 +49,15 @@ Mesy) zainstalowanej w twoim systemie.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_infodir},%{_mandir}/man1}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir},%{_infodir},%{_mandir}/man1} \
+	$RPM_BUILD_ROOT%{_pixmapsdir}
 
 install bin/{gmsh,dxf2geo} $RPM_BUILD_ROOT%{_bindir}
 install doc/gmsh.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install doc/texinfo/gmsh.info* $RPM_BUILD_ROOT%{_infodir}
+install utils/icons/gmsh48x48.png $RPM_BUILD_ROOT%{_pixmapsdir}/gmsh.png
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -60,5 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README TODO doc/{CREDITS,FAQ,VERSIONS}
 %attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*
+%{_desktopdir}/%{name}.desktop
 %{_infodir}/*.info*
+%{_mandir}/man1/*
+%{_pixmapsdir}/%{name}.png
