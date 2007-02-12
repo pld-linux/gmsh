@@ -1,5 +1,5 @@
 Summary:	A 3D mesh generator with pre- and post-processing facilities
-Summary(pl):	Generator siatki 3D zawieraj±cy pre/post procesor
+Summary(pl.UTF-8):   Generator siatki 3D zawierajÄ…cy pre/post procesor
 Name:		gmsh
 Version:	1.64.1
 Release:	1
@@ -30,15 +30,15 @@ characteristic length field for the generation of adapted meshes on
 lines, surfaces and volumes. Gmsh requires OpenGL (or Mesa) to be
 installed on your system.
 
-%description -l pl
-Gmsh jest automatycznym generatorem trójwymiarowej siatki elementów
-skoñczonych (g³ównie Delaunay), z wbudowanym pre/post procesorem.
-G³ównym zadaniem przy projektowaniu Gmsh by³o stworzenie prostego
-narzêdzia wykorzystywanego w testach akademickich, do generowania
-siatki, z parametrycznym wej¶ciem i mo¿liwo¶ci± wizualizacji wyników
-na bie¿±co. Jedn± z mocnych stron Gmesh jest mo¿liwo¶æ okre¶lenia
-d³ugo¶ci generowanego elementu, która zostanie zastosowana do
-dyskretyzacji linii, powierzchni i objêto¶ci. Gmesh wymaga OpenGL (lub
+%description -l pl.UTF-8
+Gmsh jest automatycznym generatorem trÃ³jwymiarowej siatki elementÃ³w
+skoÅ„czonych (gÅ‚Ã³wnie Delaunay), z wbudowanym pre/post procesorem.
+GÅ‚Ã³wnym zadaniem przy projektowaniu Gmsh byÅ‚o stworzenie prostego
+narzÄ™dzia wykorzystywanego w testach akademickich, do generowania
+siatki, z parametrycznym wejÅ›ciem i moÅ¼liwoÅ›ciÄ… wizualizacji wynikÃ³w
+na bieÅ¼Ä…co. JednÄ… z mocnych stron Gmesh jest moÅ¼liwoÅ›Ä‡ okreÅ›lenia
+dÅ‚ugoÅ›ci generowanego elementu, ktÃ³ra zostanie zastosowana do
+dyskretyzacji linii, powierzchni i objÄ™toÅ›ci. Gmesh wymaga OpenGL (lub
 Mesy) zainstalowanej w twoim systemie.
 
 %prep
