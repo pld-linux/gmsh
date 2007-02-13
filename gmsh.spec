@@ -1,5 +1,5 @@
 Summary:	A 3D mesh generator with pre- and post-processing facilities
-Summary(pl.UTF-8):   Generator siatki 3D zawierający pre/post procesor
+Summary(pl.UTF-8):	Generator siatki 3D zawierający pre/post procesor
 Name:		gmsh
 Version:	1.64.1
 Release:	1
