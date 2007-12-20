@@ -8,6 +8,7 @@ Group:		Applications/Engineering
 Source0:	http://www.geuz.org/gmsh/src/%{name}-%{version}-source.tgz
 # Source0-md5:	123e7f40dedcc0f2ec33ff1af4b8d127
 Source1:	%{name}.desktop
+Patch0:		%{name}-make-jN.patch
 URL:		http://www.geuz.org/gmsh/
 BuildRequires:	autoconf
 BuildRequires:	OpenGL-devel
@@ -43,6 +44,7 @@ Mesy) zainstalowanej w twoim systemie.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__autoconf}
