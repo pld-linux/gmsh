@@ -1,9 +1,12 @@
+# TODO:
+#	- build with http://www.opencascade.org/ support
+#
 Summary:	A 3D mesh generator with pre- and post-processing facilities
 Summary(pl.UTF-8):	Generator siatki 3D zawierający pre/post procesor
 Name:		gmsh
 Version:	2.0.8
 Release:	1
-License:	GPL
+License:	GPL v2
 Group:		Applications/Engineering
 Source0:	http://www.geuz.org/gmsh/src/%{name}-%{version}-source.tgz
 # Source0-md5:	123e7f40dedcc0f2ec33ff1af4b8d127
@@ -15,11 +18,14 @@ BuildRequires:	autoconf
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	fltk-gl-devel >= 1.1.0
 BuildRequires:	gsl-devel >= 1.2
-BuildRequires:	hdf5-devel
+BuildRequires:	libpng-devel
+BuildRequires:	libjpeg-devel
 BuildRequires:	texinfo-texi2dvi
 BuildRequires:	tetex-dvips
 BuildRequires:	tetex-format-plain
 BuildRequires:	tetex-format-pdftex
+BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-lib-libXft-devel
 Requires:	getdp
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
