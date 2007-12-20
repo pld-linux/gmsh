@@ -1,0 +1,11 @@
+--- gmsh-2.0.8/Makefile.orig	2007-12-20 07:06:52.021763771 +0100
++++ gmsh-2.0.8/Makefile	2007-12-20 07:07:19.017645379 +0100
+@@ -38,7 +38,7 @@
+ compile: variables initialtag
+ 	@for i in ${GMSH_DIRS}; do (cd $$i && ${MAKE}); done
+ 
+-link: variables
++link: variables compile
+ 	${LINKER} ${OPTIM} -o bin/gmsh ${GMSH_LIBS}
+ 	${POSTBUILD}
+ 
