@@ -9,9 +9,10 @@ Source0:	http://www.geuz.org/gmsh/src/%{name}-%{version}-source.tgz
 # Source0-md5:	123e7f40dedcc0f2ec33ff1af4b8d127
 Source1:	%{name}.desktop
 Patch0:		%{name}-make-jN.patch
+Patch1:		%{name}-link.patch
 URL:		http://www.geuz.org/gmsh/
 BuildRequires:	autoconf
-BuildRequires:	OpenGL-devel
+BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	fltk-gl-devel >= 1.1.0
 BuildRequires:	gsl-devel >= 1.2
 BuildRequires:	texinfo-texi2dvi
