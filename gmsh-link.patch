@@ -1,0 +1,11 @@
+--- gmsh-2.0.8/configure.in.orig	2007-12-20 07:46:37.657820032 +0100
++++ gmsh-2.0.8/configure.in	2007-12-20 07:46:51.155760837 +0100
+@@ -226,7 +226,7 @@
+       FLAGS="${FLAGS} -I${OSMESA_PREFIX} -I${OSMESA_PREFIX}/include"
+     fi
+   else
+-    GMSH_LIBS="${GMSH_LIBS} `$FLTKCONFIG --use-gl --use-images --ldflags`"
++    GMSH_LIBS="${GMSH_LIBS} `$FLTKCONFIG --use-gl --use-images --ldflags` -lGLU"
+     FLAGS="${FLAGS} `$FLTKCONFIG --use-gl --use-images --cxxflags`"
+   fi
+ 
