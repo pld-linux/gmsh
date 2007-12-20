@@ -9,3 +9,14 @@
  	${LINKER} ${OPTIM} -o bin/gmsh ${GMSH_LIBS}
  	${POSTBUILD}
  
+--- gmsh-2.0.8/doc/texinfo/Makefile.orig	2007-12-20 08:36:21.702585292 +0100
++++ gmsh-2.0.8/doc/texinfo/Makefile	2007-12-20 08:37:16.194272244 +0100
+@@ -25,7 +25,7 @@
+ ps: dvi
+ 	dvips gmsh -o
+ 
+-pdf:
++pdf: dvi
+ 	texi2pdf gmsh.texi 
+ 
+ html:
