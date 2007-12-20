@@ -14,16 +14,16 @@ Source1:	%{name}.desktop
 Patch0:		%{name}-make-jN.patch
 Patch1:		%{name}-link.patch
 URL:		http://www.geuz.org/gmsh/
-BuildRequires:	autoconf
 BuildRequires:	OpenGL-GLU-devel
+BuildRequires:	autoconf
 BuildRequires:	fltk-gl-devel >= 1.1.0
 BuildRequires:	gsl-devel >= 1.2
-BuildRequires:	libpng-devel
 BuildRequires:	libjpeg-devel
-BuildRequires:	texinfo-texi2dvi
+BuildRequires:	libpng-devel
 BuildRequires:	tetex-dvips
-BuildRequires:	tetex-format-plain
 BuildRequires:	tetex-format-pdftex
+BuildRequires:	tetex-format-plain
+BuildRequires:	texinfo-texi2dvi
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXft-devel
 Requires:	getdp
@@ -65,7 +65,6 @@ Mesy) zainstalowanej w twoim systemie.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir},%{_infodir},%{_mandir}/man1} \
 	$RPM_BUILD_ROOT%{_pixmapsdir}
 
