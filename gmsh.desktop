@@ -1,9 +1,8 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=gmsh
 Comment=A 3D mesh generator
 Comment[pl]=Generator siatki 3D
-Icon=gmsh.png
+Icon=gmsh
 Exec=gmsh
 Terminal=false
 Type=Application
